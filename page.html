@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="page.css">
+    <title>Legal FAQs</title>
+</head>
+<body>
+    <header>FAQs</header>
+    <div class="faq">
+        <div class="question">
+            <h2>What is Legalix?</h2>
+            <div class="arrow">&#9660;</div>
+        </div>
+        
+        <di class="answer">
+                <p>Legalix is a legal tech platform that connects people with lawyers and provides legal information and resources.</p>
+        </div><br><br>
+    </div>
+    <div class="faq">
+        <div class="question">
+            <h2>How do I find a lawyer on Legalix?</h2>
+            <div class="arrow">&#9660;</div>
+        </div>
+
+        <div class="answer">
+                <p>You can search for lawyers based on your legal issue and location. Use the search bar on the homepage to get started.</p>
+        </div><br><br>
+    </div>
+    <div class="faq">
+        <div class="question">
+            <h2>Is Legalix a free service?</h2>
+            <div class="arrow">&#9660;</div>
+        </div>    
+        
+        <div class="answer">
+                <p>Legalix offers both free and paid services. Some features are available for free, while others may require payment.</p>
+        </div><br><br>
+    </div>
+    <script>
+
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach((question) => {
+            question.addEventListener('click', () => {
+
+                const answer = question.nextElementSibling;
+                answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
+
+                const Arrow = question.querySelector('.arrow');
+                Arrow.style.transform = (answer.style.display === 'none' || answer.style.display === '') ? 'transform':'none';
+    });
+});
+
+    </script>
+</body>
+</html>
